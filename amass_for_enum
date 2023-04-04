@@ -1,6 +1,7 @@
-Source: https://medium.com/@noobhax/my-recon-process-dns-enumeration-d0e288f81a8a
+# Source: https://medium.com/@noobhax/my-recon-process-dns-enumeration-d0e288f81a8a
 ---------------------------------------------------------------------------------------------------------
-#   Step:01     Checking if the domain has wildcard configuration
+
+# Step:01     Checking if the domain has wildcard configuration
 
 dig @1.1.1.1 A,CNAME {test321123,testingforwildcard,plsdontgimmearesult}.<domain> +short | wc -l
 ---------------------------------------------------------------------------------------------------------
@@ -16,7 +17,7 @@ $ amass enum -passive -d <domain> -dir <path_of_directory> -o <Path_of_Output_Fi
 
 
 ---------------------------------------------------------------------------------------------------------
-Command to Extract Host Names only
+## Command to Extract Host Names only   
 $ cat amass_output/amass.txt | cut -d']' -f 2 | awk '{print $1}' | sort -u > hosts-amass.txt
 
 Example:
