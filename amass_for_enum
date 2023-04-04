@@ -1,6 +1,6 @@
 Source: https://medium.com/@noobhax/my-recon-process-dns-enumeration-d0e288f81a8a
 ---------------------------------------------------------------------------------------------------------
-# Step:01   Checking if the domain has wildcard configuration. 
+#   Step:01   Checking if the domain has wildcard configuration. 
 
 dig @1.1.1.1 A,CNAME {test321123,testingforwildcard,plsdontgimmearesult}.<domain> +short | wc -l
 ---------------------------------------------------------------------------------------------------------
